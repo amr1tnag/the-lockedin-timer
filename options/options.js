@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Save blocklist
   document.getElementById('save-bl-btn').addEventListener('click', async () => {
-    await chrome.storage.local.set({ blocklist });
+    await chrome.storage.local.set({ blocklist, settings });
     await chrome.runtime.sendMessage({ type: 'UPDATE_BLOCKLIST', blocklist });
     const btn = document.getElementById('save-bl-btn');
     btn.textContent = 'SAVED ✓';
@@ -163,20 +163,23 @@ document.addEventListener('DOMContentLoaded', async () => {
    ['sl-short', 'val-short', 'shortBreak',    true],
    ['sl-long',  'val-long',  'longBreak',      true]
   ].forEach(([slId, valId, key, asMins]) => {
-    document.getElementById(slId).addEventListener('input', e => {
+    document.getElementById(slId).addEventListener('input', async e => {
       const v = parseInt(e.target.value);
       settings[key] = v;
       document.getElementById(valId).textContent = asMins ? minsDisplay(v) : v;
+      await chrome.storage.local.set({ settings });
     });
   });
 
-  document.getElementById('toggle-hardcore').addEventListener('change', e => {
+  document.getElementById('toggle-hardcore').addEventListener('change', async e => {
     settings.hardcoreMode = e.target.checked;
+    await chrome.storage.local.set({ settings });
   });
 
-  document.getElementById('sl-interval').addEventListener('input', e => {
+  document.getElementById('sl-interval').addEventListener('input', async e => {
     settings.longBreakInterval = parseInt(e.target.value);
     document.getElementById('val-interval').textContent = e.target.value;
+    await chrome.storage.local.set({ settings });
   });
 
   // Save settings
