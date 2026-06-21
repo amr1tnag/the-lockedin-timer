@@ -86,7 +86,7 @@ body {
 
 .time-label {
   font-size: 9px;
-  color: #444;
+  color: #888;
   letter-spacing: 0.22em;
 }
 
@@ -105,7 +105,7 @@ body {
 .access-text {
   font-size: 11px;
   letter-spacing: 0.1em;
-  color: #aaa;
+  color: #ccc;
   text-align: center;
   line-height: 2;
 }
@@ -138,6 +138,6 @@ body {
 
 .term-text {
   font-size: 9px;
-  color: #3a3a3a;
+  color: #777;
   letter-spacing: 0.18em;
 }

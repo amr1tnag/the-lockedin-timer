@@ -40,7 +40,7 @@ body {
 
 .sidebar-sub {
   font-size: 9px;
-  color: #333;
+  color: #666;
   letter-spacing: 0.12em;
   margin-top: 5px;
 }
@@ -86,14 +86,14 @@ body {
 
 .sys-status-label {
   font-size: 8px;
-  color: #333;
+  color: #666;
   letter-spacing: 0.14em;
   margin-bottom: 8px;
 }
 
 .sys-mode {
   font-size: 10px;
-  color: #555;
+  color: #999;
   letter-spacing: 0.12em;
 }
 
@@ -126,7 +126,7 @@ body {
 
 .section-desc {
   font-size: 9px;
-  color: #3a3a3a;
+  color: #777;
   letter-spacing: 0.12em;
 }
 
@@ -176,7 +176,7 @@ body {
 
 .panel-desc {
   font-size: 9px;
-  color: #444;
+  color: #777;
   letter-spacing: 0.08em;
   line-height: 1.7;
 }
@@ -297,7 +297,7 @@ body {
 
 .slider-label {
   font-size: 9px;
-  color: #666;
+  color: #999;
   letter-spacing: 0.12em;
 }
 
@@ -389,7 +389,7 @@ body {
 
 .auto-desc {
   font-size: 9px;
-  color: #444;
+  color: #888;
   letter-spacing: 0.08em;
 }
 
@@ -416,7 +416,7 @@ body {
 
 .quote-body {
   font-size: 10px;
-  color: #555;
+  color: #888;
   letter-spacing: 0.08em;
   line-height: 2;
 }
@@ -450,7 +450,7 @@ body {
 
 .metric-lbl {
   font-size: 8px;
-  color: #444;
+  color: #888;
   letter-spacing: 0.15em;
 }
 
@@ -462,7 +462,7 @@ body {
   padding: 11px 0;
   border-bottom: 1px solid #0d0d0d;
   font-size: 10px;
-  color: #666;
+  color: #999;
 }
 
 .session-list li:last-child { border-bottom: none; }
@@ -518,6 +518,6 @@ body {
 
 .opt-mode {
   font-size: 8px;
-  color: #555;
+  color: #888;
   letter-spacing: 0.22em;
 }
