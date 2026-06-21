@@ -448,11 +448,70 @@ body {
   letter-spacing: 0.04em;
 }
 
-.metric-lbl {
+.ins-stats {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 20px;
+  border: 1px solid #1a1a1a;
+}
+
+.ins-stat {
+  flex: 1;
+  padding: 18px 22px;
+  border-right: 1px solid #1a1a1a;
+}
+
+.ins-stat-val {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.ins-stat-lbl {
   font-size: 8px;
   color: #888;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.18em;
 }
+
+.ins-date-box {
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: 1px solid #444;
+  margin: 14px 14px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.heat-legend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  font-size: 8px;
+  color: #666;
+  letter-spacing: 0.12em;
+  font-family: 'Courier New', monospace;
+}
+
+.heat-cell {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+}
+
+.ins-chart-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.ins-chart-panel { margin-bottom: 20px; }
 
 .session-list { list-style: none; }
 

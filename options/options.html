@@ -144,13 +144,48 @@
             <p class="section-desc">COGNITIVE PERFORMANCE METRICS.</p>
           </div>
         </div>
-        <div class="metric-grid">
-          <div class="metric-card"><div class="metric-val" id="ins-today">0</div><div class="metric-lbl">TODAY</div></div>
-          <div class="metric-card"><div class="metric-val" id="ins-week">0</div><div class="metric-lbl">THIS_WEEK</div></div>
-          <div class="metric-card"><div class="metric-val" id="ins-total">0</div><div class="metric-lbl">ALL_TIME</div></div>
-          <div class="metric-card"><div class="metric-val" id="ins-hours">0H</div><div class="metric-lbl">FOCUS_HOURS</div></div>
+
+        <!-- Stats row -->
+        <div class="ins-stats">
+          <div class="ins-stat">
+            <div class="ins-stat-val" id="ins-h-today">0H 0M</div>
+            <div class="ins-stat-lbl">TODAY</div>
+          </div>
+          <div class="ins-stat">
+            <div class="ins-stat-val" id="ins-h-week">0H 0M</div>
+            <div class="ins-stat-lbl">THIS_WEEK</div>
+          </div>
+          <div class="ins-stat">
+            <div class="ins-stat-val" id="ins-h-month">0H 0M</div>
+            <div class="ins-stat-lbl">THIS_MONTH</div>
+          </div>
+          <div class="ins-stat">
+            <div class="ins-stat-val" id="ins-h-year">0H 0M</div>
+            <div class="ins-stat-lbl">THIS_YEAR</div>
+          </div>
+          <div class="ins-date-box" id="ins-date">--</div>
         </div>
-        <div class="panel" style="margin-top:24px">
+
+        <!-- Heatmap -->
+        <div class="panel">
+          <div class="panel-title"><span id="ins-heatmap-title">POMODOROS IN THE LAST 6 MONTHS</span></div>
+          <div id="heatmap-wrap"></div>
+        </div>
+
+        <!-- Weekly + Monthly charts -->
+        <div class="ins-chart-row">
+          <div class="panel ins-chart-panel">
+            <div class="panel-title">THIS WEEK'S FOCUS DISTRIBUTION</div>
+            <div id="chart-week"></div>
+          </div>
+          <div class="panel ins-chart-panel">
+            <div class="panel-title">THIS MONTH'S FOCUS DISTRIBUTION</div>
+            <div id="chart-month"></div>
+          </div>
+        </div>
+
+        <!-- Recent sessions -->
+        <div class="panel">
           <div class="panel-title">RECENT_SESSIONS</div>
           <ul class="session-list" id="session-list"></ul>
         </div>
