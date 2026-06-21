@@ -128,11 +128,28 @@ chrome.alarms.onAlarm.addListener(async ({ name }) => {
       timer: { ...t, pomodoroCount: newCount }
     });
 
+    const breakMins = isLong ? s.longBreak : s.shortBreak;
+    chrome.notifications.create('focusDone', {
+      type: 'basic',
+      iconUrl: chrome.runtime.getURL('icons/icon128.png'),
+      title: 'LOCKEDIN — SESSION COMPLETE',
+      message: `FOCUS BLOCK ENDED. ${isLong ? 'LONG' : 'SHORT'} BREAK STARTING: ${breakMins} MIN.`,
+      priority: 2
+    });
+
     await startBreak(isLong ? 'longBreak' : 'shortBreak');
   } else {
     const { timer: t2 } = await get(['timer']);
     await chrome.storage.local.set({
       timer: { ...t2, mode: 'idle', startTime: null }
+    });
+
+    chrome.notifications.create('breakDone', {
+      type: 'basic',
+      iconUrl: chrome.runtime.getURL('icons/icon128.png'),
+      title: 'LOCKEDIN — BREAK OVER',
+      message: 'BREAK COMPLETE. READY TO START NEXT FOCUS SESSION.',
+      priority: 2
     });
   }
 });

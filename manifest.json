@@ -3,7 +3,7 @@
   "name": "LockedIn",
   "version": "1.0.0",
   "description": "Pomodoro focus timer with hardcore site blocking. Stay locked in.",
-  "permissions": ["storage", "declarativeNetRequest", "alarms"],
+  "permissions": ["storage", "declarativeNetRequest", "alarms", "notifications"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
