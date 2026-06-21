@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="blocked.css">
+  <title>Access Denied — LockedIn</title>
+</head>
+<body>
+  <div class="logo">&#9632;&nbsp; LOCKEDIN</div>
+
+  <main class="center">
+    <div class="ring-wrap">
+      <svg class="ring-svg" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+        <circle class="ring-track" cx="110" cy="110" r="90"/>
+        <circle class="ring-fill" id="ring-fill" cx="110" cy="110" r="90"/>
+      </svg>
+      <div class="ring-text">
+        <span class="time-display" id="time-display">--:--</span>
+        <span class="time-label">[REMAINING]</span>
+      </div>
+    </div>
+
+    <h1 class="headline">STAY FOCUSED</h1>
+    <hr class="divider">
+
+    <p class="access-text">
+      ACCESS DENIED.&nbsp;&nbsp;CURRENT STATUS:&nbsp;&nbsp;<span class="badge">FOCUS_MODE</span>
+    </p>
+
+    <hr class="divider">
+
+    <button class="return-btn" id="return-btn">&#8592;&nbsp;&nbsp;RETURN_TO_WORK.EXE</button>
+
+    <p class="term-text" id="term-text">SESSION_TERMINATION_IN: --m --s</p>
+  </main>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

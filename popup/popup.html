@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <title>LockedIn</title>
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="logo">LOCKEDIN</div>
+      <div class="header-actions">
+        <button class="icon-btn" id="btn-options" title="Settings">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="status-pill" id="status-pill">[ STATUS: IDLE ]</div>
+
+    <!-- Timer Tab -->
+    <div class="tab-pane active" id="pane-timer">
+      <div class="ring-wrap">
+        <svg class="ring-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+          <circle class="ring-track" cx="100" cy="100" r="80"/>
+          <circle class="ring-fill" id="ring-fill" cx="100" cy="100" r="80"/>
+        </svg>
+        <div class="ring-text">
+          <span class="time-display" id="time-display">25:00</span>
+          <span class="time-mode" id="time-mode">POMODORO</span>
+        </div>
+      </div>
+      <button class="cta-btn" id="action-btn">&#9654;&nbsp;&nbsp;START_FOCUS</button>
+    </div>
+
+    <!-- Block Tab -->
+    <div class="tab-pane" id="pane-block">
+      <div class="mini-block">
+        <div class="mini-block-title">BLOCKED_SITES</div>
+        <ul class="mini-list" id="mini-list"></ul>
+        <button class="cta-btn outline" id="btn-manage-block" style="margin-top:14px">MANAGE_BLOCKLIST</button>
+      </div>
+    </div>
+
+    <!-- Data Tab -->
+    <div class="tab-pane" id="pane-data">
+      <div class="data-grid">
+        <div class="data-row"><span>TODAY</span><span id="d-today">0</span></div>
+        <div class="data-row"><span>THIS_WEEK</span><span id="d-week">0</span></div>
+        <div class="data-row"><span>TOTAL_SESSIONS</span><span id="d-total">0</span></div>
+        <div class="data-row"><span>POMODOROS</span><span id="d-count">0</span></div>
+        <div class="data-row"><span>FOCUS_HOURS</span><span id="d-hours">0H 0M</span></div>
+      </div>
+    </div>
+
+    <!-- Bottom Nav -->
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-pane="timer">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        TIMER
+      </button>
+      <button class="nav-btn" data-pane="block">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+        BLOCK
+      </button>
+      <button class="nav-btn" data-pane="data">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        DATA
+      </button>
+    </nav>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
